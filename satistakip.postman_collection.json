@@ -1,0 +1,35 @@
+{
+	"info": {
+		"_postman_id": "63dd8e84-272f-47a0-836e-d5239160a612",
+		"name": "satistakip",
+		"description": "UcusTakip uygulamasi\r\n",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Airport Save",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": ""
+				},
+				"description": "Havaalanı ekleme"
+			},
+			"response": []
+		},
+		{
+			"name": "Airport List and Search",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": ""
+				},
+				"description": "Havaalanı search ve arama işlemleri"
+			},
+			"response": []
+		}
+	],
+	"protocolProfileBehavior": {}
+}
