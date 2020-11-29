@@ -1,7 +1,6 @@
 package com.hava.satistakip.model;
 
-import javax.persistence.Entity;
-import javax.persistence.Id;
+import javax.persistence.*;
 
 /**
  * Havayolu şirketi ekleme ve arama işlemleri
@@ -9,17 +8,21 @@ import javax.persistence.Id;
 @Entity
 public class Company {
     @Id
+    @GeneratedValue(strategy = GenerationType.AUTO)
     private Long id;
     private String name;
     private Boolean active;
+    @OneToOne
+    private Airport airport;
 
     public Company() {
     }
 
-    public Company(Long id, String name, Boolean active) {
+    public Company(Long id, String name, Boolean active,Airport airport) {
         this.id = id;
         this.name = name;
         this.active = active;
+        this.airport = airport;
     }
 
     public Long getId() {
@@ -44,5 +47,13 @@ public class Company {
 
     public void setActive(Boolean active) {
         this.active = active;
+    }
+
+    public Airport getAirport() {
+        return airport;
+    }
+
+    public void setAirport(Airport airport) {
+        this.airport = airport;
     }
 }
