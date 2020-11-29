@@ -9,6 +9,6 @@ import java.util.List;
 
 @Repository
 public interface IAirportRepository extends JpaRepository<Airport,Long> {
-    @Query(value = "SELECT ID,NAME,ACTIVE FROM AIRPORT WHERE NAME LIKE %?%",nativeQuery = true)
+    @Query(value = "SELECT ID,NAME,ACTIVE,TOWN_ID FROM AIRPORT WHERE NAME LIKE %?%",nativeQuery = true)
     List<Airport> search(String search);
 }
