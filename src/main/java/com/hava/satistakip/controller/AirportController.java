@@ -24,7 +24,7 @@ public class AirportController {
 
     @RequestMapping("/findAll")
     public List<Airport> findAll(@RequestParam String search) {
-        return airportRepository.findAll();
+        return airportRepository.search(search);
     }
 
 

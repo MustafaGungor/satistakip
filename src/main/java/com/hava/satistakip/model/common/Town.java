@@ -1,9 +1,6 @@
 package com.hava.satistakip.model.common;
 
-import javax.persistence.Entity;
-import javax.persistence.Id;
-import javax.persistence.JoinColumn;
-import javax.persistence.OneToOne;
+import javax.persistence.*;
 
 /**
  * İlçe tanımları
@@ -11,6 +8,7 @@ import javax.persistence.OneToOne;
 @Entity
 public class Town {
     @Id
+    @GeneratedValue(strategy = GenerationType.AUTO)
     private Long id;
     private String name;
     private boolean active;
