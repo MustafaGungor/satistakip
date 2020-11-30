@@ -9,6 +9,9 @@ import java.util.List;
 
 @Repository
 public interface IFlightRepository extends JpaRepository<Flight,Long> {
-    @Query(value = "SELECT ID,NAME,ROUTE_ID,FLIGHT_DATE,ACTIVE FROM FLIGHT WHERE NAME LIKE %?%",nativeQuery = true)
+    @Query(value = "SELECT ID,NAME,ROUTE_ID,FLIGHT_DATE,ACTIVE,QUOTA,PRICE FROM FLIGHT WHERE NAME LIKE %?%",nativeQuery = true)
     List<Flight> search(String search);
+
+    @Query(value = "SELECT ID,NAME,ROUTE_ID,FLIGHT_DATE,ACTIVE,QUOTA,PRICE FROM FLIGHT WHERE ID = ?",nativeQuery = true)
+    Flight findByIdFlight(Long id);
 }

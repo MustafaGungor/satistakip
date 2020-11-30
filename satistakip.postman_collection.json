@@ -1,291 +1,38 @@
 {
-	"id": "c41f17bd-c75f-bb9f-b60f-9bc1edf5e267",
+	"id": "22a7d975-5104-4e50-9d2c-085ddbf04a97",
 	"name": "satistakip",
 	"description": "UcusTakip uygulamasi\r\n",
+	"auth": null,
+	"events": null,
+	"variables": [],
 	"order": [
-		"b1e844ba-20a1-14a1-f176-368e66e86301",
-		"6bf8e708-1673-e54f-a9c3-93d3c53533d9",
-		"4ec6d226-cb09-0850-8806-c23a8c4634b5",
-		"f99e3ecc-b5e6-3586-88cb-d363d997d9e0",
-		"b12b2c8e-1861-463c-4635-7c3616e47aab",
-		"18c1769d-9dcd-62db-35e6-b5243eb278d6",
-		"9b03b80b-b55e-0335-cfe0-3517aceba9ce",
-		"7ade4873-6519-9cfe-cfbf-bfc4d284665b",
-		"9cb5671b-1491-3096-4bb5-796bff524943",
-		"6cd3fd97-4c79-56e3-3306-6fe725d8f3df"
+		"481597a1-2fdc-4625-978c-7d5a436ce093",
+		"5d6ca5c5-cbaa-44aa-94bb-abb2ea88b2fc",
+		"8e5a3f02-9368-41fa-988e-fd93731ed0c2",
+		"05cdabd1-796a-49fd-b56f-6f42e59e1a7f",
+		"a8903e28-fd26-4b56-88e3-3f3f45b8ddd3",
+		"b82700fb-271f-44a6-9465-fded8b56036b",
+		"5233c909-8b0e-4d86-8a71-0cdc10031cb7",
+		"2464c207-e960-4f28-91cc-bfd1efdcfba7",
+		"999f56d4-f708-4947-920f-58cdd56cdfd0",
+		"40e76137-cc0f-4f89-8742-4d68a2458563",
+		"a525bcc2-ad82-4d2d-9aec-9e71768de9ab"
 	],
-	"folders": [],
 	"folders_order": [],
-	"timestamp": 0,
-	"owner": "6315465",
-	"public": false,
+	"protocolProfileBehavior": {},
+	"folders": [],
 	"requests": [
 		{
-			"id": "18c1769d-9dcd-62db-35e6-b5243eb278d6",
-			"headers": "",
-			"headerData": [],
-			"url": "localhost:9090/route/findAll?search=Rota",
-			"queryParams": [
-				{
-					"key": "search",
-					"value": "Rota",
-					"equals": true,
-					"description": "",
-					"enabled": true
-				}
-			],
-			"preRequestScript": null,
-			"pathVariables": {},
-			"pathVariableData": [],
-			"method": "GET",
-			"data": [],
-			"dataMode": "params",
-			"tests": null,
-			"currentHelper": "normal",
-			"helperAttributes": {},
-			"time": 1606610240794,
-			"name": "Route List and Search",
-			"description": "Havaalanı search ve arama işlemleri",
-			"collectionId": "c41f17bd-c75f-bb9f-b60f-9bc1edf5e267",
-			"responses": []
-		},
-		{
-			"id": "4ec6d226-cb09-0850-8806-c23a8c4634b5",
-			"headers": "Content-Type: application/json\n",
-			"headerData": [
-				{
-					"key": "Content-Type",
-					"value": "application/json",
-					"description": "",
-					"enabled": true
-				}
-			],
-			"url": "localhost:9090/company/saveOrUpdate",
-			"queryParams": [],
-			"preRequestScript": null,
-			"pathVariables": {},
-			"pathVariableData": [],
-			"method": "POST",
-			"data": [],
-			"dataMode": "raw",
-			"tests": null,
-			"currentHelper": "normal",
-			"helperAttributes": {},
-			"time": 1606610232399,
-			"name": "Company Save",
-			"description": "Havaalanı ekleme",
-			"collectionId": "c41f17bd-c75f-bb9f-b60f-9bc1edf5e267",
-			"responses": [],
-			"rawModeData": "{\n\t\"id\" : null,\n\t\"name\" : \"Company A\",\n\t\"active\" : false,\n\t\"airport\": {\n\t\t\"id\" : 1,\n\t\t\"name\" : \"A HavaYolu\",\n\t\t\"active\" : false\n\t}\n}"
-		},
-		{
-			"id": "6bf8e708-1673-e54f-a9c3-93d3c53533d9",
-			"headers": "",
-			"headerData": [],
-			"url": "localhost:9090/airport/findAll?search=",
-			"queryParams": [
-				{
-					"key": "search",
-					"value": "",
-					"equals": true,
-					"description": "",
-					"enabled": true
-				}
-			],
-			"preRequestScript": null,
-			"pathVariables": {},
-			"pathVariableData": [],
-			"method": "GET",
-			"data": [],
-			"dataMode": "params",
-			"tests": null,
-			"currentHelper": "normal",
-			"helperAttributes": {},
-			"time": 1606610227331,
-			"name": "Airport List and Search",
-			"description": "Havaalanı search ve arama işlemleri",
-			"collectionId": "c41f17bd-c75f-bb9f-b60f-9bc1edf5e267",
-			"responses": []
-		},
-		{
-			"id": "6cd3fd97-4c79-56e3-3306-6fe725d8f3df",
-			"headers": "",
-			"headerData": [],
-			"url": "localhost:9090/flight/findAll?search=Uçuş",
-			"queryParams": [
-				{
-					"key": "search",
-					"value": "Uçuş",
-					"equals": true,
-					"description": "",
-					"enabled": true
-				}
-			],
-			"preRequestScript": null,
-			"pathVariables": {},
-			"pathVariableData": [],
-			"method": "GET",
-			"data": [],
-			"dataMode": "params",
-			"tests": null,
-			"currentHelper": "normal",
-			"helperAttributes": {},
-			"time": 1606717006119,
-			"name": "Ticket List and Search",
-			"description": "Havaalanı search ve arama işlemleri",
-			"collectionId": "c41f17bd-c75f-bb9f-b60f-9bc1edf5e267",
-			"responses": []
-		},
-		{
-			"id": "7ade4873-6519-9cfe-cfbf-bfc4d284665b",
-			"headers": "",
-			"headerData": [],
-			"url": "localhost:9090/flight/findAll?search=Uçuş",
-			"queryParams": [
-				{
-					"key": "search",
-					"value": "Uçuş",
-					"equals": true,
-					"description": "",
-					"enabled": true
-				}
-			],
-			"preRequestScript": null,
-			"pathVariables": {},
-			"pathVariableData": [],
-			"method": "GET",
-			"data": [],
-			"dataMode": "params",
-			"tests": null,
-			"currentHelper": "normal",
-			"helperAttributes": {},
-			"time": 1606610245579,
-			"name": "Flight List and Search",
-			"description": "Havaalanı search ve arama işlemleri",
-			"collectionId": "c41f17bd-c75f-bb9f-b60f-9bc1edf5e267",
-			"responses": []
-		},
-		{
-			"id": "9b03b80b-b55e-0335-cfe0-3517aceba9ce",
-			"headers": "Content-Type: application/json\n",
-			"headerData": [
-				{
-					"key": "Content-Type",
-					"value": "application/json",
-					"description": "",
-					"enabled": true
-				}
-			],
-			"url": "localhost:9090/flight/saveOrUpdate",
-			"queryParams": [],
-			"preRequestScript": null,
-			"pathVariables": {},
-			"pathVariableData": [],
-			"method": "POST",
-			"data": [],
-			"dataMode": "raw",
-			"tests": null,
-			"currentHelper": "normal",
-			"helperAttributes": {},
-			"time": 1606610243352,
-			"name": "Flight Save",
-			"description": "Havaalanı ekleme",
-			"collectionId": "c41f17bd-c75f-bb9f-b60f-9bc1edf5e267",
-			"responses": [],
-			"rawModeData": "{\n    \"id\": 2,\n    \"name\": \"Uçuş 1\",\n    \"active\": false,\n    \"route\" : {\n        \"id\": 27,\n        \"description\": \"Rota 1\",\n        \"goingAirport\": {\n            \"id\": 1,\n            \"name\": \"Esenboğa Havaalanı\",\n            \"active\": true\n        },\n        \"arriveAirport\": {\n            \"id\": 2,\n            \"name\": \"Sabiha Gökçen Havaalanı\",\n            \"active\": true\n        }\n    },\n    \"flightDate\":1606604339524,\n    \"quota\" : 100,\n    \"price\" : 7.43\n}"
-		},
-		{
-			"id": "9cb5671b-1491-3096-4bb5-796bff524943",
-			"headers": "Content-Type: application/json\n",
-			"headerData": [
-				{
-					"key": "Content-Type",
-					"value": "application/json",
-					"description": "",
-					"enabled": true
-				}
-			],
-			"url": "localhost:9090/ticket/saveOrUpdate",
-			"queryParams": [],
-			"preRequestScript": null,
-			"pathVariables": {},
-			"pathVariableData": [],
-			"method": "POST",
-			"data": [],
-			"dataMode": "raw",
-			"tests": null,
-			"currentHelper": "normal",
-			"helperAttributes": {},
-			"time": 1606716997614,
-			"name": "Ticket Save",
-			"description": "Havaalanı ekleme",
-			"collectionId": "c41f17bd-c75f-bb9f-b60f-9bc1edf5e267",
-			"responses": [],
-			"rawModeData": "{\n    \"id\": null,\n    \"ticketNumber\" : null,\n    \"cardNumber\" : \"1245-5636-3526-8656\",\n    \"salesDate\":1606604339524,\n    \"priceTicket\": 52,\n    \"active\": true,\n    \"isSale\": null,\n    \"name\" : \"Mustafa\",\n    \"surname\" : \"Güngör\",\n    \"phoneNumber\" : \"5055555555\",\n    \"flight\" : {\n    \t\"id\": 28,\n    \t\"name\": \"Uçuş 1\",\n    \t\"active\": false,\n    \t\"route\" : {\n        \t\"id\": 27,\n        \t\"description\": \"Rota 1\",\n        \t\"goingAirport\": {\n            \t\"id\": 1,\n            \t\"name\": \"Esenboğa Havaalanı\",\n            \t\"active\": true\n        \t},\n        \t\"arriveAirport\": {\n            \t\"id\": 2,\n            \t\"name\": \"Sabiha Gökçen Havaalanı\",\n            \t\"active\": true\n        \t}\n    \t},\n    \"flightDate\":1606604339524\n}\n}"
-		},
-		{
-			"id": "b12b2c8e-1861-463c-4635-7c3616e47aab",
-			"headers": "Content-Type: application/json\n",
-			"headerData": [
-				{
-					"key": "Content-Type",
-					"value": "application/json",
-					"description": "",
-					"enabled": true
-				}
-			],
-			"url": "localhost:9090/route/saveOrUpdate",
-			"queryParams": [],
-			"preRequestScript": null,
-			"pathVariables": {},
-			"pathVariableData": [],
-			"method": "POST",
-			"data": [],
-			"dataMode": "raw",
-			"tests": null,
-			"currentHelper": "normal",
-			"helperAttributes": {},
-			"time": 1606610237950,
-			"name": "Route Save",
-			"description": "Havaalanı ekleme",
-			"collectionId": "c41f17bd-c75f-bb9f-b60f-9bc1edf5e267",
-			"responses": [],
-			"rawModeData": "{\n    \"id\": 2,\n    \"description\": \"Rota 1\",\n    \"goingAirport\": {\n        \"id\": 1,\n        \"name\": \"Esenboğa Havaalanı\",\n        \"active\": true\n    },\n    \"arriveAirport\": {\n        \"id\": 2,\n        \"name\": \"Sabiha Gökçen Havaalanı\",\n        \"active\": true\n    }\n}"
-		},
-		{
-			"id": "b1e844ba-20a1-14a1-f176-368e66e86301",
-			"headers": "Content-Type: application/json\n",
-			"headerData": [
-				{
-					"key": "Content-Type",
-					"value": "application/json",
-					"description": "",
-					"enabled": true
-				}
-			],
-			"url": "localhost:9090/airport/saveOrUpdate",
-			"queryParams": [],
-			"preRequestScript": null,
-			"pathVariables": {},
-			"pathVariableData": [],
-			"method": "POST",
-			"data": [],
-			"dataMode": "raw",
-			"tests": null,
-			"currentHelper": "normal",
-			"helperAttributes": {},
-			"time": 1606610229913,
-			"name": "Airport Save",
-			"description": "Havaalanı ekleme",
-			"collectionId": "c41f17bd-c75f-bb9f-b60f-9bc1edf5e267",
-			"responses": [],
-			"rawModeData": "{\n\t\"id\" : null,\n\t\"name\" : \"A HavaYolu\",\n\t\"active\" : false,\n\t\"town\" : {\n\t\t\"id\":15\n\t}\n}"
-		},
-		{
-			"id": "f99e3ecc-b5e6-3586-88cb-d363d997d9e0",
-			"headers": "",
-			"headerData": [],
+			"id": "05cdabd1-796a-49fd-b56f-6f42e59e1a7f",
+			"name": "Company List and Search",
 			"url": "localhost:9090/company/findAll?search=TGS",
+			"description": "Havaalanı search ve arama işlemleri",
+			"data": null,
+			"dataOptions": null,
+			"dataMode": null,
+			"headerData": [],
+			"method": "GET",
+			"pathVariableData": [],
 			"queryParams": [
 				{
 					"key": "search",
@@ -295,20 +42,271 @@
 					"enabled": true
 				}
 			],
-			"preRequestScript": null,
-			"pathVariables": {},
-			"pathVariableData": [],
-			"method": "GET",
-			"data": [],
-			"dataMode": "params",
-			"tests": null,
-			"currentHelper": "normal",
-			"helperAttributes": {},
-			"time": 1606610235212,
-			"name": "Company List and Search",
+			"auth": null,
+			"events": null,
+			"folder": null,
+			"headers": "",
+			"pathVariables": {}
+		},
+		{
+			"id": "2464c207-e960-4f28-91cc-bfd1efdcfba7",
+			"name": "Flight List and Search",
+			"url": "localhost:9090/flight/findAll?search=Uçuş",
 			"description": "Havaalanı search ve arama işlemleri",
-			"collectionId": "c41f17bd-c75f-bb9f-b60f-9bc1edf5e267",
-			"responses": []
+			"data": null,
+			"dataOptions": null,
+			"dataMode": null,
+			"headerData": [],
+			"method": "GET",
+			"pathVariableData": [],
+			"queryParams": [
+				{
+					"key": "search",
+					"value": "Uçuş",
+					"equals": true,
+					"description": "",
+					"enabled": true
+				}
+			],
+			"auth": null,
+			"events": null,
+			"folder": null,
+			"headers": "",
+			"pathVariables": {}
+		},
+		{
+			"id": "40e76137-cc0f-4f89-8742-4d68a2458563",
+			"name": "Ticket List and Search",
+			"url": "localhost:9090/ticket/findAll?search=8c0e88ed64366a65d3cf46d114cec48c",
+			"description": "Havaalanı search ve arama işlemleri",
+			"data": null,
+			"dataOptions": null,
+			"dataMode": null,
+			"headerData": [],
+			"method": "GET",
+			"pathVariableData": [],
+			"queryParams": [
+				{
+					"key": "search",
+					"value": "8c0e88ed64366a65d3cf46d114cec48c",
+					"equals": true,
+					"description": "",
+					"enabled": true
+				}
+			],
+			"auth": null,
+			"events": null,
+			"folder": null,
+			"headers": "",
+			"pathVariables": {}
+		},
+		{
+			"id": "481597a1-2fdc-4625-978c-7d5a436ce093",
+			"name": "Airport Save",
+			"url": "localhost:9090/airport/saveOrUpdate",
+			"description": "Havaalanı ekleme",
+			"data": [],
+			"dataOptions": null,
+			"dataMode": "raw",
+			"headerData": [
+				{
+					"key": "Content-Type",
+					"value": "application/json",
+					"description": "",
+					"enabled": true
+				}
+			],
+			"method": "POST",
+			"pathVariableData": [],
+			"queryParams": [],
+			"auth": null,
+			"events": null,
+			"folder": null,
+			"rawModeData": "{\n\t\"id\" : null,\n\t\"name\" : \"A HavaYolu\",\n\t\"active\" : false,\n\t\"town\" : {\n\t\t\"id\":15\n\t}\n}",
+			"headers": "Content-Type: application/json\n",
+			"pathVariables": {}
+		},
+		{
+			"id": "5233c909-8b0e-4d86-8a71-0cdc10031cb7",
+			"name": "Flight Save",
+			"url": "localhost:9090/flight/saveOrUpdate",
+			"description": "Havaalanı ekleme",
+			"data": [],
+			"dataOptions": null,
+			"dataMode": "raw",
+			"headerData": [
+				{
+					"key": "Content-Type",
+					"value": "application/json",
+					"description": "",
+					"enabled": true
+				}
+			],
+			"method": "POST",
+			"pathVariableData": [],
+			"queryParams": [],
+			"auth": null,
+			"events": null,
+			"folder": null,
+			"rawModeData": "{\n    \"id\": 2,\n    \"name\": \"Uçuş 1\",\n    \"active\": false,\n    \"route\" : {\n        \"id\": 27,\n        \"description\": \"Rota 1\",\n        \"goingAirport\": {\n            \"id\": 1,\n            \"name\": \"Esenboğa Havaalanı\",\n            \"active\": true\n        },\n        \"arriveAirport\": {\n            \"id\": 2,\n            \"name\": \"Sabiha Gökçen Havaalanı\",\n            \"active\": true\n        }\n    },\n    \"flightDate\":1606604339524,\n    \"quota\" : 100,\n    \"price\" : 7.43\n}",
+			"headers": "Content-Type: application/json\n",
+			"pathVariables": {}
+		},
+		{
+			"id": "5d6ca5c5-cbaa-44aa-94bb-abb2ea88b2fc",
+			"name": "Airport List and Search",
+			"url": "localhost:9090/airport/findAll?search=",
+			"description": "Havaalanı search ve arama işlemleri",
+			"data": null,
+			"dataOptions": null,
+			"dataMode": null,
+			"headerData": [],
+			"method": "GET",
+			"pathVariableData": [],
+			"queryParams": [
+				{
+					"key": "search",
+					"value": "",
+					"equals": true,
+					"description": "",
+					"enabled": true
+				}
+			],
+			"auth": null,
+			"events": null,
+			"folder": null,
+			"headers": "",
+			"pathVariables": {}
+		},
+		{
+			"id": "8e5a3f02-9368-41fa-988e-fd93731ed0c2",
+			"name": "Company Save",
+			"url": "localhost:9090/company/saveOrUpdate",
+			"description": "Havaalanı ekleme",
+			"data": [],
+			"dataOptions": null,
+			"dataMode": "raw",
+			"headerData": [
+				{
+					"key": "Content-Type",
+					"value": "application/json",
+					"description": "",
+					"enabled": true
+				}
+			],
+			"method": "POST",
+			"pathVariableData": [],
+			"queryParams": [],
+			"auth": null,
+			"events": null,
+			"folder": null,
+			"rawModeData": "{\n\t\"id\" : null,\n\t\"name\" : \"Company A\",\n\t\"active\" : false,\n\t\"airport\": {\n\t\t\"id\" : 1,\n\t\t\"name\" : \"A HavaYolu\",\n\t\t\"active\" : false\n\t}\n}",
+			"headers": "Content-Type: application/json\n",
+			"pathVariables": {}
+		},
+		{
+			"id": "999f56d4-f708-4947-920f-58cdd56cdfd0",
+			"name": "Ticket Save",
+			"url": "localhost:9090/ticket/saveOrUpdate",
+			"description": "Havaalanı ekleme",
+			"data": [],
+			"dataOptions": null,
+			"dataMode": "raw",
+			"headerData": [
+				{
+					"key": "Content-Type",
+					"value": "application/json",
+					"description": "",
+					"enabled": true
+				}
+			],
+			"method": "POST",
+			"pathVariableData": [],
+			"queryParams": [],
+			"auth": null,
+			"events": null,
+			"folder": null,
+			"rawModeData": "{\n    \"id\": null,\n    \"ticketNumber\" : null,\n    \"cardNumber\" : \"1245-5636-3526-8656\",\n    \"salesDate\":1606604339524,\n    \"priceTicket\": 52,\n    \"active\": true,\n    \"isSale\": null,\n    \"name\" : \"Mustafa\",\n    \"surname\" : \"Güngör\",\n    \"phoneNumber\" : \"5055555555\",\n    \"flight\" : {\n    \t\"id\": 28\n    \t}\n\n}",
+			"headers": "Content-Type: application/json\n",
+			"pathVariables": {}
+		},
+		{
+			"id": "a525bcc2-ad82-4d2d-9aec-9e71768de9ab",
+			"name": "Ticket Canceled",
+			"url": "localhost:9090/ticket/delete?ticketNumber=8c0e88ed64366a65d3cf46d114cec48c",
+			"description": "",
+			"data": null,
+			"dataOptions": null,
+			"dataMode": null,
+			"headerData": [],
+			"method": "DELETE",
+			"pathVariableData": [],
+			"queryParams": [
+				{
+					"key": "ticketNumber",
+					"value": "8c0e88ed64366a65d3cf46d114cec48c",
+					"equals": true,
+					"description": "",
+					"enabled": true
+				}
+			],
+			"auth": null,
+			"events": [],
+			"folder": null,
+			"headers": "",
+			"pathVariables": {}
+		},
+		{
+			"id": "a8903e28-fd26-4b56-88e3-3f3f45b8ddd3",
+			"name": "Route Save",
+			"url": "localhost:9090/route/saveOrUpdate",
+			"description": "Havaalanı ekleme",
+			"data": [],
+			"dataOptions": null,
+			"dataMode": "raw",
+			"headerData": [
+				{
+					"key": "Content-Type",
+					"value": "application/json",
+					"description": "",
+					"enabled": true
+				}
+			],
+			"method": "POST",
+			"pathVariableData": [],
+			"queryParams": [],
+			"auth": null,
+			"events": null,
+			"folder": null,
+			"rawModeData": "{\n    \"id\": 2,\n    \"description\": \"Rota 1\",\n    \"goingAirport\": {\n        \"id\": 1,\n        \"name\": \"Esenboğa Havaalanı\",\n        \"active\": true\n    },\n    \"arriveAirport\": {\n        \"id\": 2,\n        \"name\": \"Sabiha Gökçen Havaalanı\",\n        \"active\": true\n    }\n}",
+			"headers": "Content-Type: application/json\n",
+			"pathVariables": {}
+		},
+		{
+			"id": "b82700fb-271f-44a6-9465-fded8b56036b",
+			"name": "Route List and Search",
+			"url": "localhost:9090/route/findAll?search=Rota",
+			"description": "Havaalanı search ve arama işlemleri",
+			"data": null,
+			"dataOptions": null,
+			"dataMode": null,
+			"headerData": [],
+			"method": "GET",
+			"pathVariableData": [],
+			"queryParams": [
+				{
+					"key": "search",
+					"value": "Rota",
+					"equals": true,
+					"description": "",
+					"enabled": true
+				}
+			],
+			"auth": null,
+			"events": null,
+			"folder": null,
+			"headers": "",
+			"pathVariables": {}
 		}
 	]
 }

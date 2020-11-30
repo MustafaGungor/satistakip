@@ -1,6 +1,8 @@
 package com.hava.satistakip.controller;
 
+import com.hava.satistakip.model.Flight;
 import com.hava.satistakip.model.Ticket;
+import com.hava.satistakip.repository.IFlightRepository;
 import com.hava.satistakip.repository.ITicketRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.RequestBody;
@@ -20,11 +22,55 @@ public class TicketController {
     @Autowired
     private ITicketRepository ticketRepository;
 
+    @Autowired
+    private IFlightRepository flightRepository;
+
     @RequestMapping("/saveOrUpdate")
     public Ticket saveorUpdateAirport(@RequestBody Ticket ticket) {
         ticket.setCardNumber(toMaskedString(ticket.getCardNumber()));
         ticket.setTicketNumber(createTicketNumber());
-        return ticketRepository.save(ticket);
+        Flight flight = flightRepository.findByIdFlight(ticket.getFlight().getId());
+        ticket.setFlight(flight);
+        try {
+            CalculateTicket(ticket);
+            return ticketRepository.save(ticket);
+        }catch (Exception e){
+            return null; //the quota is full or wrong flight
+        }
+    }
+
+    @RequestMapping("/findAll")
+    public List<Ticket> findAll(@RequestParam String search) {
+        return ticketRepository.search(search);
+    }
+
+    @RequestMapping("/delete")
+    public String delete(@RequestParam String ticketNumber) {
+        Ticket ticket = ticketRepository.findByTicketNumber(ticketNumber);
+        String returnValue = "";
+        try {
+            ticketRepository.delete(ticket);
+            returnValue = "Ticket cancellation has been successfully completed";
+        }catch (Exception e){
+            returnValue = "An error occurred during ticket cancellation. Please contact us!";
+        }
+        return returnValue;
+    }
+
+    public void CalculateTicket(Ticket ticket){
+        Integer countTicket = ticketRepository.listTicketByFlifhtId(ticket.getFlight().getId());
+        Integer quote = ticket.getFlight().getQuota();
+        int percent= countTicket*100/quote;
+        if(percent == 0){
+            return;
+        }
+        //Kontenjan %10 dolduğunda bilet fiyatı %10 artacak
+        if(percent % 10 == 0){
+            Flight flight = flightRepository.findByIdFlight(ticket.getFlight().getId());
+            Double newPrice = flight.getPrice() + flight.getPrice()*0.1;
+            flight.setPrice(newPrice);
+            flightRepository.save(flight);
+        }
     }
 
     public String toMaskedString(String value){
@@ -56,24 +102,6 @@ public class TicketController {
             e.printStackTrace();
             return null;
         }
-    }
-
-    @RequestMapping("/findAll")
-    public List<Ticket> findAll(@RequestParam String search) {
-        return ticketRepository.search(search);
-    }
-
-    @RequestMapping("/delete")
-    public String delete(@RequestParam String ticketNumber) {
-        Ticket ticket = ticketRepository.findByTicketNumber(ticketNumber);
-        String returnValue = "";
-        try {
-            ticketRepository.delete(ticket);
-            returnValue = "Ticket cancellation has been successfully completed";
-        }catch (Exception e){
-            returnValue = "An error occurred during ticket cancellation. Please contact us!";
-        }
-        return returnValue;
     }
 
 }
