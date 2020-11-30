@@ -3,7 +3,7 @@ Havayolu Projesi
 
 Postman Collection Dosyası Ana Dizindedir. Servisleri test ve kontrol edebilirsiniz. 
 Servisleri sırası ile çalıştırırsanız sonuçları hızlı alabilirsiniz.
-Postman export dosyasi satistakip.postman_collection.json 
+Postman export dosyasi [satistakip.postman_collection.json] 
 
 # 1- Havayolu şirketi eklenebilmeli, aranabilmeli 
      CompanyController - ICompanyRepository - Company Model
