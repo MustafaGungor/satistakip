@@ -13,7 +13,7 @@ Postman export dosyasi [satistakip.postman_collection.json]
      RouteController - IRouteRepository - Route Model
 # 4- Havayolu şirketine uçuş tanımlanabilmeli, aranabilmeli            
     FlightController - IFlightController -Flight Model
-# 5- Bilet satın alınabilmeli, Bilet numarası ile arama yapılabilmeli ve bilet iptali yapılabilmeli.
+# 5- Bilet satın alınabilmeli, Bilet numarası ile arama yapılabilmeli ve bilet iptali yapılabilmeli.Bilet numarası ile arama yapılabilmeli ve bilet iptali yapılabilmeli.
     TicketController - ITicketRepository -Ticket Model
     
     
