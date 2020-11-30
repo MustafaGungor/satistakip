@@ -19,11 +19,15 @@ public class Ticket {
     private Flight flight;
     private boolean active;
     private boolean isSale;
+    private String name;
+    private String surname;
+    private String phoneNumber;
 
     public Ticket() {
     }
 
-    public Ticket(Long id,String ticketNumber,String cardNumber,Date salesDate,Double priceTicket,Flight flight,boolean active,boolean isSale){
+    public Ticket(Long id,String ticketNumber,String cardNumber,Date salesDate,Double priceTicket,Flight flight,
+                  boolean active,boolean isSale,String name,String surname,String phoneNumber){
         this.id = id;
         this.ticketNumber = ticketNumber;
         this.cardNumber = cardNumber;
@@ -32,6 +36,9 @@ public class Ticket {
         this.flight = flight;
         this.active = active;
         this.isSale = isSale;
+        this.name = name;
+        this.surname = surname;
+        this.phoneNumber = phoneNumber;
     }
 
     public Long getId() {
@@ -97,4 +104,29 @@ public class Ticket {
     public void setSale(boolean sale) {
         isSale = sale;
     }
+
+    public String getName() {
+        return name;
+    }
+
+    public void setName(String name) {
+        this.name = name;
+    }
+
+    public String getSurname() {
+        return surname;
+    }
+
+    public void setSurname(String surname) {
+        this.surname = surname;
+    }
+
+    public String getPhoneNumber() {
+        return phoneNumber;
+    }
+
+    public void setPhoneNumber(String phoneNumber) {
+        this.phoneNumber = phoneNumber;
+    }
+
 }

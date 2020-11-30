@@ -11,4 +11,6 @@ import java.util.List;
 public interface ITicketRepository extends JpaRepository<Ticket,Long> {
     @Query(value = "SELECT ID,TICKET_NUMBER,CARD_NUMBER,SALES_DATE,PRICE_TICKET,ACTIVE,IS_SALE,FLIGHT_ID FROM TICKET WHERE TICKET_NUMBER LIKE %?%",nativeQuery = true)
     List<Ticket> search(String search);
+
+    Ticket findByTicketNumber(String ticketNumber);
 }
