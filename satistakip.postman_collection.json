@@ -11,7 +11,8 @@
 		"18c1769d-9dcd-62db-35e6-b5243eb278d6",
 		"9b03b80b-b55e-0335-cfe0-3517aceba9ce",
 		"7ade4873-6519-9cfe-cfbf-bfc4d284665b",
-		"9cb5671b-1491-3096-4bb5-796bff524943"
+		"9cb5671b-1491-3096-4bb5-796bff524943",
+		"6cd3fd97-4c79-56e3-3306-6fe725d8f3df"
 	],
 	"folders": [],
 	"folders_order": [],
@@ -107,6 +108,35 @@
 			"responses": []
 		},
 		{
+			"id": "6cd3fd97-4c79-56e3-3306-6fe725d8f3df",
+			"headers": "",
+			"headerData": [],
+			"url": "localhost:9090/flight/findAll?search=Uçuş",
+			"queryParams": [
+				{
+					"key": "search",
+					"value": "Uçuş",
+					"equals": true,
+					"description": "",
+					"enabled": true
+				}
+			],
+			"preRequestScript": null,
+			"pathVariables": {},
+			"pathVariableData": [],
+			"method": "GET",
+			"data": [],
+			"dataMode": "params",
+			"tests": null,
+			"currentHelper": "normal",
+			"helperAttributes": {},
+			"time": 1606717006119,
+			"name": "Ticket List and Search",
+			"description": "Havaalanı search ve arama işlemleri",
+			"collectionId": "c41f17bd-c75f-bb9f-b60f-9bc1edf5e267",
+			"responses": []
+		},
+		{
 			"id": "7ade4873-6519-9cfe-cfbf-bfc4d284665b",
 			"headers": "",
 			"headerData": [],
@@ -186,12 +216,12 @@
 			"tests": null,
 			"currentHelper": "normal",
 			"helperAttributes": {},
-			"time": 1606610247916,
+			"time": 1606716997614,
 			"name": "Ticket Save",
 			"description": "Havaalanı ekleme",
 			"collectionId": "c41f17bd-c75f-bb9f-b60f-9bc1edf5e267",
 			"responses": [],
-			"rawModeData": "{\n    \"id\": null,\n    \"ticketNumber\" : null,\n    \"cardNumber\" : \"1245-5636-3526-8656\",\n    \"salesDate\":1606604339524,\n    \"priceTicket\": 52,\n    \"active\": true,\n    \"isSale\": null,\n    \"flight\" : {\n    \t\"id\": 28,\n    \t\"name\": \"Uçuş 1\",\n    \t\"active\": false,\n    \t\"route\" : {\n        \t\"id\": 27,\n        \t\"description\": \"Rota 1\",\n        \t\"goingAirport\": {\n            \t\"id\": 1,\n            \t\"name\": \"Esenboğa Havaalanı\",\n            \t\"active\": true\n        \t},\n        \t\"arriveAirport\": {\n            \t\"id\": 2,\n            \t\"name\": \"Sabiha Gökçen Havaalanı\",\n            \t\"active\": true\n        \t}\n    \t},\n    \"flightDate\":1606604339524\n}\n}"
+			"rawModeData": "{\n    \"id\": null,\n    \"ticketNumber\" : null,\n    \"cardNumber\" : \"1245-5636-3526-8656\",\n    \"salesDate\":1606604339524,\n    \"priceTicket\": 52,\n    \"active\": true,\n    \"isSale\": null,\n    \"name\" : \"Mustafa\",\n    \"surname\" : \"Güngör\",\n    \"phoneNumber\" : \"5055555555\",\n    \"flight\" : {\n    \t\"id\": 28,\n    \t\"name\": \"Uçuş 1\",\n    \t\"active\": false,\n    \t\"route\" : {\n        \t\"id\": 27,\n        \t\"description\": \"Rota 1\",\n        \t\"goingAirport\": {\n            \t\"id\": 1,\n            \t\"name\": \"Esenboğa Havaalanı\",\n            \t\"active\": true\n        \t},\n        \t\"arriveAirport\": {\n            \t\"id\": 2,\n            \t\"name\": \"Sabiha Gökçen Havaalanı\",\n            \t\"active\": true\n        \t}\n    \t},\n    \"flightDate\":1606604339524\n}\n}"
 		},
 		{
 			"id": "b12b2c8e-1861-463c-4635-7c3616e47aab",
